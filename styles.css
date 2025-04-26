@@ -321,3 +321,328 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   
+  /* Milk & Froth Styles */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fffaf0, #ffe4e1);
+    color: #222;
+    transition: background 0.4s ease;
+    position: relative;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/swirly-bg.gif') repeat;
+    opacity: 0.08;
+    z-index: -2;
+    animation: moveBackground 30s linear infinite;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+  
+  @keyframes moveBackground {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+  }
+  
+  .navbar {
+    background: #ffcad4;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0d0c0c;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff7a7a;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    color: #5a2d0c;
+    padding: 0 1rem;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #ffa69e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ff7a7a;
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #a0522d;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff0f0;
+    margin-top: 2rem;
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+/* Background Styling */
+.background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/swirly-bg.gif') repeat;
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 30s linear infinite;
+  }
+  
+  /* Keyframes for Background Animation */
+  @keyframes moveBackground {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+  }
+  
+  /* Content Styling */
+  .content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+  
+  /* Section Styling */
+  .about-intro, .process {
+    margin-bottom: 40px;
+  }
+  
+  .process-step {
+    margin-bottom: 30px;
+  }
+  
+  .process-step h3 {
+    color: #c06b3e;
+    margin-bottom: 10px;
+  }
+  
+  .process-step ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #e29f98;
+    color: rgba(11, 10, 10, 0.765);
+    padding: 0.75rem 1.5rem;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ff7a7a;
+    transform: scale(1.05);
+  }
+
+  /* Add styles specifically for the process steps on the About page */
+.process-step {
+    background: linear-gradient(135deg, #fff0f0, #ffe4e1);
+    border-left: 6px solid #ffa69e;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .process-step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .process-step h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #d46a6a;
+    text-decoration: none;
+  }
+  
+  .process-step p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .process-step ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  
+  .process-step ul li {
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+
+  ul li{
+    text-decoration: none;
+  }
+
+  .location {
+    margin-bottom: 2rem;
+    background: #fff5f5;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .location:hover {
+    transform: translateY(-4px);
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff7f0;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0 0.4rem;
+    color: #6c4f3d;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #f3d1c0;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #d46a6a;
+    outline: none;
+    background-color: #fffdfb;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form .btn {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #f08f90, #ffb397);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Optional animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
